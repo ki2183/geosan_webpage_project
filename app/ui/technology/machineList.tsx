@@ -82,13 +82,13 @@ export default function MachineList(){
 
   
     return(
-        <section id="machine-list" className='mb-10'>
+        <div id="machine-list" className='mb-10'>
             <div ref={containerRef} style={container_style} className="ml-auto mr-auto flex flex-col items-center justify-center">
             <span className='w-full text-black font-bold pb-2'>장비/설비</span>
                 <div className="ag-theme-alpine" style={{ height: `${excel_total_height+5}px`, width: "100%" }}>
                     <AgGridReact gridOptions={gridOptions} columnDefs={columnDefs} rowData={excelData}/>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }

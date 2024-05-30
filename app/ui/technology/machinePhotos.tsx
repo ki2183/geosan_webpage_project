@@ -37,7 +37,7 @@ export default function MachinePhotos(){
         gap:gap
     }
     return (
-        <section id="machine-photos">
+        <div id="machine-photos">
             <div ref={containerRef} className="grid ml-auto mr-auto container-machine-photos" style={conatiner_style}>
                 {
                      Array.from({ length: 4 }).map((_, idx) => (
@@ -70,6 +70,6 @@ export default function MachinePhotos(){
                      ))
                 }          
             </div>
-        </section>
+        </div>
     )
 }
