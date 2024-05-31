@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useRef } from "react";
 import { useAppDispatch, useAppSelector } from "../REDUX/STORE/hook";
 import MachineInfo from "../ui/technology/machineInfo";
@@ -12,6 +14,7 @@ export default function Measurement(){
 
     useEffect(()=>{
         update_container_scroll_height()
+        setTimeout(()=>update_container_scroll_height(),1000)
         window.addEventListener('resize',update_container_scroll_height)
         return ()=>
             window.removeEventListener('resize',update_container_scroll_height)
@@ -19,7 +22,7 @@ export default function Measurement(){
 
     const update_container_scroll_height = () =>{
         if(containerRef.current){
-            dispatch(nav_height_handler({idx:1,height:containerRef.current.scrollHeight}))
+            dispatch(nav_height_handler({idx:1,height:containerRef.current.offsetHeight}))
         }
     }
 

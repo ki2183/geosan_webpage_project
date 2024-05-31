@@ -4,6 +4,9 @@ import gsap from "gsap";
 import { useEffect, useRef, useState } from "react"
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { useAppSelector } from "../REDUX/STORE/hook";
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger)
 
 export default function SideNav(){
@@ -20,12 +23,15 @@ export default function SideNav(){
         left: "50%"
     }   
 
+    const gap = 144
+    const nav_height = 9*16
+
     const liRef = useRef<HTMLLIElement>(null)
     const liRefArr = useRef<Array<HTMLLIElement | null>>([]);
     const box = useRef<HTMLDivElement>(null)
     const containerRef = useRef<HTMLDivElement>(null)
     const [scrollVar,setScrollVar] = useState<number>(0)
-    const [totalHeight,setTotalHeight] = useState<number>(0)
+    const [pageNumber,setPageNumber] = useState<number>(0)
 
     useEffect(()=>{
         get_scrollHeight()
@@ -50,36 +56,25 @@ export default function SideNav(){
     useEffect(()=>{
         if(liRefArr.current[0]){
             gsap.to(box.current,{
-                duration:1,
-                top:44+40-40,
+                duration:0.5,
+                top:44+40*pageNumber,
                 ease:"power3.out"
             })
         }   
-    },[])
+    },[pageNumber])
 
     useEffect(()=>{
         let sum = 0
+        
         navHeight.forEach((item,idx)=>{
-            const sumHeight = sum+item
+            
+            const sumHeight = idx === 0 ? sum+item+(nav_height)+gap : sum+item
             if(sum < scrollVar && scrollVar < sumHeight){
-                console.log(idx)
-                console.log(sumHeight,scrollVar)
+                setPageNumber(idx)
             }
-
-            sum = sumHeight
+                sum = sumHeight
 
         })
-        // if(navHeight.length > 0){
-            
-        //     for (const item of navHeight) {
-        //         const sumHeight = sum + item;
-        //         if (sum <= scrollVar && scrollVar < sumHeight) {
-        //             console.log(navHeight.indexOf(item), sumHeight);
-        //             return;
-        //         }
-        //         sum = sumHeight;
-        //     }
-        // }
     },[scrollVar,navHeight])
 
     const tl = gsap.timeline()
@@ -88,6 +83,17 @@ export default function SideNav(){
         duration:0.5,
         
     })
+
+    const onClick = (idx:number) =>{
+        const height = idx === 0 ? 0 : navHeight[idx-1]+gap+nav_height+10
+        gsap.to(window,{
+            duration:0.5,
+            scrollTo:{
+                y:height,
+                autoKill: true,
+            }
+        })
+    }
 
     return (
         <div id="side-nav" className="relative">
@@ -98,10 +104,10 @@ export default function SideNav(){
                         기술
                     </h1>
                     <ol>
-                        <li ref={el => { liRefArr.current[0] = el }} className="p-2 pl-4">
+                        <li onClick={e=>{onClick(0)}} ref={el => { liRefArr.current[0] = el }} className="p-2 pl-4 cursor-pointer">
                             설비
                         </li>
-                        <li ref={el => { liRefArr.current[1] = el }} className="p-2 pl-4">
+                        <li onClick={e=>{onClick(1)}} ref={el => { liRefArr.current[1] = el }} className="p-2 pl-4 cursor-pointer">
                             측정
                         </li>
                     </ol>

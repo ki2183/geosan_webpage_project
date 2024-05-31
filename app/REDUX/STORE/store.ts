@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import navHeightSlice from '../SLICE/navHeightSlice'
+import technologyPageSlice from '../SLICE/technologyPageSlice'
 
 export const store = configureStore({
   reducer: {
-    navHeight:navHeightSlice
+    navHeight:navHeightSlice,
+    technologyPage:technologyPageSlice
   }
 })
 
