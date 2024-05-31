@@ -30,10 +30,6 @@ export default function MachineList(){
       if(w) setW(w)
   }
 
-  useEffect(()=>{
-    console.log(w)
-  },[w])
-
   const columnDefs: ColDef[] = [
     { headerName: "No.", valueGetter: 'node.rowIndex + 1',width:w*0.1},
     { headerName: '관리번호', field: 'serial_num' ,width:w*0.3},

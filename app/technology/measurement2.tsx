@@ -5,7 +5,7 @@ import MachineList from "../ui/technology/machineList";
 import MachinePhotos from "../ui/technology/machinePhotos";
 import { nav_height_handler } from "../REDUX/SLICE/navHeightSlice";
 
-export default function Measurement(){
+export default function Measurement2(){
     const navHeight = useAppSelector(state => state.navHeight)
     const dispatch = useAppDispatch()
     const containerRef = useRef<HTMLDivElement>(null)
@@ -19,7 +19,7 @@ export default function Measurement(){
 
     const update_container_scroll_height = () =>{
         if(containerRef.current){
-            dispatch(nav_height_handler({idx:1,height:containerRef.current.scrollHeight}))
+            dispatch(nav_height_handler({idx:2,height:containerRef.current.scrollHeight}))
         }
     }
 

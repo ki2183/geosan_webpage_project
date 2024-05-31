@@ -3,9 +3,13 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react"
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { useAppSelector } from "../REDUX/STORE/hook";
 gsap.registerPlugin(ScrollTrigger)
 
 export default function SideNav(){
+
+    const contents_num = 2
+    const navHeight = useAppSelector(state => state.navHeight)
 
     const style_conatiner = {
         background: "linear-gradient(312deg, rgb(218 218 218 / 70%), rgba(238, 238, 238, 0.39))",
@@ -21,8 +25,11 @@ export default function SideNav(){
     const box = useRef<HTMLDivElement>(null)
     const containerRef = useRef<HTMLDivElement>(null)
     const [scrollVar,setScrollVar] = useState<number>(0)
+    const [totalHeight,setTotalHeight] = useState<number>(0)
 
     useEffect(()=>{
+        get_scrollHeight()
+
         window.addEventListener('scroll',get_scrollHeight)
         return ()=>{
             window.removeEventListener('scroll',get_scrollHeight)
@@ -37,7 +44,6 @@ export default function SideNav(){
         gsap.to(containerRef.current,{
             top:scrollVar,
             duration:0.5,
-
         })
     },[scrollVar])
 
@@ -51,8 +57,40 @@ export default function SideNav(){
         }   
     },[])
 
+    useEffect(()=>{
+        let sum = 0
+        navHeight.forEach((item,idx)=>{
+            const sumHeight = sum+item
+            if(sum < scrollVar && scrollVar < sumHeight){
+                console.log(idx)
+                console.log(sumHeight,scrollVar)
+            }
+
+            sum = sumHeight
+
+        })
+        // if(navHeight.length > 0){
+            
+        //     for (const item of navHeight) {
+        //         const sumHeight = sum + item;
+        //         if (sum <= scrollVar && scrollVar < sumHeight) {
+        //             console.log(navHeight.indexOf(item), sumHeight);
+        //             return;
+        //         }
+        //         sum = sumHeight;
+        //     }
+        // }
+    },[scrollVar,navHeight])
+
+    const tl = gsap.timeline()
+    tl.to(containerRef.current,{
+        top:scrollVar,
+        duration:0.5,
+        
+    })
+
     return (
-        <div  id="side-nav" className="relative">
+        <div id="side-nav" className="relative">
             <div ref={containerRef}  style={style_conatiner} id="side-nav-container" className="absolute rounded-lg w-4/5 h-auto ml-auto mr-auto overflow-hidden" >
                 <div>
                     <div ref={box} style={{width:`100%`,height:`${liRef.current?.clientHeight}px`}} className="absolute w-10 h-10 bg-white mix-blend-difference"/>
