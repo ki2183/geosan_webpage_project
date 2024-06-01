@@ -9,7 +9,7 @@ export default function MachineInfo(){
 
     return (
         <div style={container_style} id="machine-info" className="ml-auto mr-auto mb-10">
-            <h1 className="text-4xl font-bold mb-8">
+            <h1 className="relative title-technology text-4xl font-bold mb-8">
                 설비
             </h1>
 

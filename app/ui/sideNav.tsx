@@ -99,7 +99,7 @@ export default function SideNav(){
         <div id="side-nav" className="relative">
             <div ref={containerRef}  style={style_conatiner} id="side-nav-container" className="absolute rounded-lg w-4/5 h-auto ml-auto mr-auto overflow-hidden" >
                 <div>
-                    <div ref={box} style={{width:`100%`,height:`${liRef.current?.clientHeight}px`}} className="absolute w-10 h-10 bg-white mix-blend-difference"/>
+                    <div ref={box} style={{width:`100%`,height:`${liRef.current?.clientHeight}px`}} className="sideNav-container absolute w-10 h-10 bg-white mix-blend-difference"/>
                     <h1 className="p-2 font-bold text-lg">
                         기술
                     </h1>

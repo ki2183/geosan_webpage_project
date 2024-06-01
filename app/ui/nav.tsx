@@ -13,7 +13,7 @@ export default function Nav(){
             link:"/technology"
         },{
             title:"거래처",
-            link:"/aa"
+            link:"/vendor"
         },{
             title:"찾아오시는 길",
             link:"/bb"
@@ -21,7 +21,7 @@ export default function Nav(){
     ]
     return(
         <>  
-        <nav className="fixed top-0 right-0 w-full flex items-center p-6 h-8 z-10 justify-between text-white bg-black">
+        <nav style={{backgroundColor:"#2f353b"}} className="fixed top-0 right-0 w-full flex items-center p-6 h-8 z-10 justify-between text-white">
             <span>GEOSAN TECH</span>
             <ol className="flex flex-row gap-3 z-10 text-sm items-center">
                     {
