@@ -14,13 +14,14 @@ export default function MainBanner(){
         <section id="main-banner">
             <div style={{height:"70vh"}} className=" relative noto-sans-kr w-screen bg-main pt-8 flex item-center justify-center">
                 <div style={{backgroundImage: `url(${pattern.src})`, opacity:0.02}} className="absolute w-full h-full top-0"/>
-                {/* <div style={{backgroundImage: `url(${cnc.src})`, opacity:1}} className="absolute w-full h-full top-0"/> */}
-
-                <Image
-                    alt="img"
-                    src={cnc}
-                    className="absolute right-0 w-full "
-                />
+                <div style={{
+                    backgroundImage: `url(${cnc.src})`, 
+                    opacity:1,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+            
+                }} className="absolute w-full h-full top-0"/>
                 
                 
                 <div style={{maxWidth:"1080px"}} className="h-full w-3/4 grid grid-cols-2">
@@ -38,11 +39,11 @@ export default function MainBanner(){
                     <div className="flex items-center justify-center" >
                         <div className="w-screen h-full flex relative items-center justify-center">
                             <div className="relative w-full">
-                                <Image
+                                {/* <Image
                                     src={plan}
                                     className="ml-auto w-full opacity-50"
                                     alt="설계도"
-                                />
+                                /> */}
                             </div>
                           
                         </div>
@@ -57,7 +58,7 @@ function Mainbutton(){
     const text_color = "#1D3A44"
     return(
         <button style={{color:text_color}} className="bg-red-50 p-1 pl-3 pr-3 rounded-full font-bold text-gray-600">
-            지도 보기
+            지도보기
         </button>
     )
 }
