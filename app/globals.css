@@ -35,16 +35,6 @@ body {
   font-size: 11px;
 }
 
-.title-technology::after{
-    /* content: "";
-    position: absolute;
-    background-color: rgba(119, 119, 119, 0.507);
-    bottom: -15px;
-    left: 0;
-    width: 2.5rem;
-    height: 3px; */
-}
-
 .container-grid{
   grid-template-columns: 264px auto;
   overflow: hidden;
@@ -61,21 +51,51 @@ body {
   width: 100%;
   height: 40px;
   z-index: 0;
-}.main-contents{
-  max-width: 360px;
-  max-height: 360px;
-  width: 24vw;
-  height: 24vw;
-  padding: 1.5rem;
-  border: 1px solid #1d3a444e;
-  box-shadow: 5px 10px 20px #1d3a4446;
-  transform: all 0.1;
-}.main-contents:hover{
-  /* filter:blur(1rem) */
+}
+.container-box{
+  flex-direction: row;
+}.main-cnc-img{
+  display: block;
+}.main-plan-img{
+  width: 80%;
+  display: none;
+}.main-info-contents-box{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}.main-info-contents-box>div{
+  max-width: 420px;
+}.container-mainBanner{
+  height: 70vh;
+}.nav-bg{
+  background-color: rgb(236, 236, 236);
+  z-index: -1;
+  top:-3rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.516);
 }
 /* ---------------모바일---------------- */
 @media (max-width: 1024px) {
+  .container-mainBanner{
+    height: 30rem;
+  }
   .container-grid{
       grid-template-columns: 0px auto;
+  }.container-box{
+    flex-direction: column;
+  }.main-cnc-img{
+    display: none;
+  }.main-plan-img{
+    display: flex;
+    opacity: 0.1;
+  }.main-info-contents-box{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }.main-info-contents-box>div{
+    max-width: 100%;
   }
+}
+
+
+.test-box{
+  transition: all 1s;
+}
+.test-box:hover{
+  scale: 1.5;
 }

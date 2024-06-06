@@ -1,0 +1,68 @@
+.container_mainBanner{
+    max-height: 800px;
+    height: 70vh;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #1D3A44;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(max-width:1024px){
+        height: 30rem;
+    }
+}
+
+.main_banner_cnc_img{
+    display: block;
+    z-index: 1;
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0;
+    right: 0;
+    
+}
+.main_banner_plan_img{
+    position: absolute;
+    left:50%;
+    top:50%;
+    width: 600px;
+    // background-color: black;
+    transform: translate(-50%,-50%);
+}
+.main_info_contents_box{
+    z-index: 10;
+    height: 100%;
+    width: 75%;
+    display: grid;
+    max-width:1080px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+// @media (max-width: 1024px) {
+//     .main_banner_cnc_img{
+//         display: none;
+//     }
+// }
+
+@media(min-height:590px){
+    @media (max-width:1224px) {
+        .main_banner_cnc_img{
+            display: none;
+        }
+        .main_info_contents_box{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+}
+@media(max-height:590px){
+    @media (max-width:1024px) {
+        .main_banner_cnc_img{
+            display: none;
+        }
+        .main_info_contents_box{
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+}

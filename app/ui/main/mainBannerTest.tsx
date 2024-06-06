@@ -1,10 +1,9 @@
-import Image from "next/image"
-import factory from "../../IMGs/factory.jpg"
 import plan from "../../IMGs/mainbanner/plan.png"
-import plan1 from "../../IMGs/mainbanner/plan1.png"
-import plan2 from "../../IMGs/mainbanner/plan2.png"
-import pattern from "../../IMGs/mainbanner/parttern.png"
-import cnc from "../../IMGs/mainbanner/cnc_.png"
+import pattern from "../../IMGs/mainbanner/pattern.webp"
+import cnc from "../../IMGs/mainbanner/cnc.webp"
+import cnc_ from "../../IMGs/mainbanner/cnc_.webp"
+import Image from "next/image"
+import style from "./mainBanner.module.scss"
 
 export default function MainBanner(){
 
@@ -12,20 +11,21 @@ export default function MainBanner(){
 
     return(
         <section id="main-banner">
-            <div style={{height:"70vh"}} className=" relative noto-sans-kr w-screen bg-main pt-8 flex item-center justify-center">
+            <div className={style.container_mainBanner}>
                 <div style={{backgroundImage: `url(${pattern.src})`, opacity:0.02}} className="absolute w-full h-full top-0"/>
-                <div style={{
-                    backgroundImage: `url(${cnc.src})`, 
-                    opacity:1,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-            
-                }} className="absolute w-full h-full top-0"/>
-                
-                
-                <div style={{maxWidth:"1080px"}} className="h-full w-3/4 grid grid-cols-2">
-                    <div style={{maxWidth:"420px"}} className="flex flex-col items-star justify-center text-orange-50 gap-5">
+                <Image
+                        src={plan}
+                        alt='asd'
+                        className={style.main_banner_plan_img}
+                    />
+                <Image
+                        src={cnc_}
+                        alt='asd'
+                        quality={100}
+                        className={style.main_banner_cnc_img}
+                />
+                <div className={style.main_info_contents_box}>
+                    <div className="flex flex-col justify-center text-orange-50 gap-5">
                         <h1 className="text-5xl font-bold">
                             거산테크
                         </h1>
@@ -36,18 +36,7 @@ export default function MainBanner(){
 
                         
                     </div>
-                    <div className="flex items-center justify-center" >
-                        <div className="w-screen h-full flex relative items-center justify-center">
-                            <div className="relative w-full">
-                                {/* <Image
-                                    src={plan}
-                                    className="ml-auto w-full opacity-50"
-                                    alt="설계도"
-                                /> */}
-                            </div>
-                          
-                        </div>
-                    </div>
+          
                 </div>
             </div>
         </section>

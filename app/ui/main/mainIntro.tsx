@@ -1,10 +1,9 @@
-import Image from "next/image"
-import cnc_icon from "../../IMGs/mainbanner/cnc_icon.png"
-import keli_icon from "../../IMGs/mainbanner/caliper.png"
-import handshake_icon from "../../IMGs/mainbanner/handshake.jpg"
-import intro_icon from "../../IMGs/mainbanner/intro.jpg"
-import measure_icon from "../../IMGs/mainbanner/measure.jpg"
+import handshake_icon from "../../IMGs/mainbanner/handshake.webp"
+import intro_icon from "../../IMGs/mainbanner/intro.webp"
+import measure_icon from "../../IMGs/mainbanner/measure.webp"
 import MainIntroBox from "./mainIntroBox"
+import style from "./main.module.scss"
+import Image, { StaticImageData } from "next/image"
 
 
 export default function Maininfo(){
@@ -19,16 +18,16 @@ export default function Maininfo(){
         {
             title:"설비",
             info:"cnc,탬핑기계등 보유 기계 현황",
-            url:intro_icon.src
+            url:intro_icon
         },
         {
             title:"측정",
             info:"cnc,탬핑기계등 보유 기계 현황",
-            url:measure_icon.src
+            url:measure_icon
         },{
             title:"거래처",
             info:"거래중인 회사 목록",
-            url:handshake_icon.src
+            url:handshake_icon
         },
     ]
     return(
@@ -41,10 +40,11 @@ export default function Maininfo(){
                     <div className="w-8 h-1 bg-main mt-2 bg-main opacity-60" id="title-line"/>
                 </div>
                <div className="w-full h-auto">
-                    <div className="mr-auto ml-auto flex pt-9 gap-9 items-center justify-center">        
+                    <div className="container-box mr-auto ml-auto flex pt-9 gap-9 items-center justify-center">        
+
                         {
-                            info.map(({title,url,info},idx)=>(
-                                <MainIntroBox
+                            info.map(({url,info,title},idx)=>(
+                                <MaininfoItem
                                     key={idx}
                                     url={url}
                                     info={info}
@@ -52,9 +52,37 @@ export default function Maininfo(){
                                 />
                             ))
                         }
+
                     </div>
                </div>
             </div>
         </section>
+    )
+}
+
+type MainIntroItem_type = {
+    title:string,
+    info:string,
+    url:StaticImageData,
+}
+function MaininfoItem({
+    url,info,title
+}:MainIntroItem_type){
+    return(
+        <div className={style.container_box}>
+            <div className={style.container_box_img}>
+                <Image
+                    src={url}
+                    alt="img"
+                    objectFit="none"
+                    objectPosition="center"
+                />
+            </div>
+            <div className={style.container_box_text}>
+                <span>{title}</span>
+                <span>{info}</span>
+            </div>
+            
+        </div>
     )
 }
