@@ -40,12 +40,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-// @media (max-width: 1024px) {
-//     .main_banner_cnc_img{
-//         display: none;
-//     }
-// }
-
 @media(min-height:590px){
     @media (max-width:1224px) {
         .main_banner_cnc_img{

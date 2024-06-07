@@ -10,12 +10,11 @@ import { notoSansKr } from "@/app/font/font"
 export default function Navigation(){
     const style = {
         backgroundColor: "rgb(236, 236, 236)",
-        zIndex: -1,
         borderBottom: "1px solid rgba(128, 128, 128, 0.516)",
     }
 
     return(
-        <section style={style} id="navigation" className={`z-10 fixed top-0 w-screen h-12`}>
+        <section style={style} id="navigation" className={`z-30 fixed top-0 w-screen h-12`}>
             <div className="nav-bg fixed w-screen h-12"/>
             <div className="text-black w-screen h-full flex flex-row items-center justify-between">
                 <div className="flex items-center justify-center ml-4 mr-4 gap-2">

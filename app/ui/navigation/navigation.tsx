@@ -34,7 +34,7 @@ export default function Navigation(){
     },[scollY])
 
     return(
-        <section style={style} id="navigation" className={`z-10 fixed top-0 w-screen h-12`}>
+        <section style={style} id="navigation" className={`z-20 fixed top-0 w-screen h-12`}>
             <div ref={navRef}className="nav-bg fixed w-screen h-12"/>
             <div style={{color:scollY > 48 ? "black" : "white" }} className="w-screen h-full flex flex-row items-center justify-between">
                 <div className="flex items-center justify-center ml-4 mr-4 gap-2">
