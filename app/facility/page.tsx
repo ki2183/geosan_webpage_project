@@ -5,6 +5,7 @@ import Navigation from "../ui/navigation/navigation_side";
 import Location from "../ui/location";
 import styles from "./facility.module.scss"
 import FacilityInfo from "../ui/facility/facilittyInfo";
+import FacilityExcel from "../ui/facility/facilityexcel";
 
 export const cls = (...classnames: string[]) => {
   return classnames.join(" ");
@@ -17,6 +18,7 @@ export default function Home() {
           <div className={styles.container}>
             <Location/>
             <FacilityInfo/>
+            <FacilityExcel/>
           </div>
     
       </main>

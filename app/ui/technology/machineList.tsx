@@ -1,10 +1,10 @@
 "use client"
 
 import { AgGridReact } from 'ag-grid-react';
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-alpine.css';
+// import 'ag-grid-community/styles/ag-grid.css';
+// import 'ag-grid-community/styles/ag-theme-bootstrap.css';
 import { ColDef, ColumnApi, GridApi, RowHeightParams } from 'ag-grid-community';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';\
 
 export default function MachineList(){
     const [gridApi, setGridApi] = useState<GridApi | null>(null);
@@ -37,6 +37,7 @@ export default function MachineList(){
     { headerName: '구입년도', field: 'date',width:w*0.2},
     { headerName: '구입처', field: 'brand' ,width:w*0.15},
   ];
+
 
   const excelData = [
     {serial_num: "GS-M-01", name: "머시닝센타",date:"2017.02",brand:"현대위아" },
