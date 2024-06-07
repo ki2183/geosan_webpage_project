@@ -1,10 +1,13 @@
 import { ColDef, RowHeightParams } from "ag-grid-community";
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-bootstrap.css';
+import 'ag-grid-community/styles/ag-theme-alpine.css';
+import 'ag-grid-community/styles/ag-theme-balham.css';
+import 'ag-grid-community/styles/ag-theme-quartz.css';
 import Image from "next/image";
 import cnc1 from "../../IMGs/cnc/cnc550.webp"
 import cnc2 from "../../IMGs/cnc/kf6500.webp"
+import style from "./facilityexcel.module.scss"
 
 export default function FacilityExcel(){
 
@@ -36,28 +39,45 @@ export default function FacilityExcel(){
         {serial_num: "PUMA-GT2600L", name: "터닝머신(CNC)",date:"2019.01",brand:"두산인프라" },
       ];
 
-      const gridOptions = {
-        getRowHeight: (params: RowHeightParams) => {
-          return params.data.age > 40 ? 50 : 30;
-        }
-      };
-
     return(
         <section id="facility-excel">
-            <div style={{gridTemplateColumns:"360px auto"}} className="w-full gap-6 grid">
-                <div className="flex flex-col items-center justify-center gap-2">
-                    <Image
+            <div className={style.facility_excel_container}>
+                <div className={style.facility_excel_img_container}>
+                    
+                    <div className={style.facility_excel_img}>
+                        <Image
+                            alt="ajskld"
+                            src={cnc1}
+                            className="h-full"
+                        />
+                    </div>
+                    <div className={style.facility_excel_img}>
+                        <Image
+                            alt="ajskld"
+                            src={cnc2}
+                            className="w-3/4 h-3/4"
+                        />
+                    </div>
+                    <div className={style.facility_excel_img}></div>
+                    <div className={style.facility_excel_img}></div>
+                    <div className={style.facility_excel_img}></div>
+                    <div className={style.facility_excel_img}></div>
+
+ 
+                  
+                    {/* <Image
                         alt="ajskld"
-                        src={cnc1}
-                        className="p-2 bg-gray-200 rounded-xl"
+                        src={cnc2}
+                        className="w-3/4 p-2 bg-gray-200 rounded-xl"
                     />
                     <Image
                         alt="ajskld"
                         src={cnc2}
                         className="w-3/4 p-2 bg-gray-200 rounded-xl"
-                    />
+                    /> */}
+
                 </div>
-                <div className="ag-theme-alpine" style={{ height: `500px`, width: "100%" }}>
+                <div className="ag-theme-quartz" style={{ height: `500px`, width: "100%" }}>
                 <AgGridReact
                     columnDefs={columnDefs}
                     rowData={excelData}

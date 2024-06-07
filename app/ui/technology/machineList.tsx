@@ -2,9 +2,9 @@
 
 import { AgGridReact } from 'ag-grid-react';
 // import 'ag-grid-community/styles/ag-grid.css';
-// import 'ag-grid-community/styles/ag-theme-bootstrap.css';
+import 'ag-grid-community/styles/ag-theme-alpine.css';
 import { ColDef, ColumnApi, GridApi, RowHeightParams } from 'ag-grid-community';
-import { useEffect, useRef, useState } from 'react';\
+import { useEffect, useRef, useState } from 'react';
 
 export default function MachineList(){
     const [gridApi, setGridApi] = useState<GridApi | null>(null);
