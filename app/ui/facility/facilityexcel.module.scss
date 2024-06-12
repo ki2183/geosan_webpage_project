@@ -4,6 +4,7 @@
     height: auto;
     display: grid;
     gap: 1.5rem;
+    min-height: 500px;
     grid-template-columns: 0.375fr 0.675fr;
     // grid-template-columns:0px auto;
     @media (max-width:1260px) {

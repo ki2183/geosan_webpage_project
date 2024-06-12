@@ -1,5 +1,5 @@
 import Image from "next/image"
-import logo from "../IMGs/geosan-logo.jpg"
+import logo from "../IMGs/geosan_logo.png"
 
 export default function UnderCompanyInfo(){
     const container_style = {

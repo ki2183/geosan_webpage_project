@@ -24,6 +24,7 @@
 body {
   /* color: rgb(var(--foreground-rgb)); */
   overflow-x: hidden;
+  background-color: rgb(236, 236, 236);;
 }
 
 @layer utilities {

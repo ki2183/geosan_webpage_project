@@ -58,26 +58,9 @@ export default function FacilityExcel(){
                             className="w-3/4 h-3/4"
                         />
                     </div>
-                    <div className={style.facility_excel_img}></div>
-                    <div className={style.facility_excel_img}></div>
-                    <div className={style.facility_excel_img}></div>
-                    <div className={style.facility_excel_img}></div>
-
- 
-                  
-                    {/* <Image
-                        alt="ajskld"
-                        src={cnc2}
-                        className="w-3/4 p-2 bg-gray-200 rounded-xl"
-                    />
-                    <Image
-                        alt="ajskld"
-                        src={cnc2}
-                        className="w-3/4 p-2 bg-gray-200 rounded-xl"
-                    /> */}
 
                 </div>
-                <div className="ag-theme-quartz" style={{ height: `500px`, width: "100%" }}>
+                <div className="ag-theme-quartz" style={{ height: `100%`, width: "100%" }}>
                 <AgGridReact
                     columnDefs={columnDefs}
                     rowData={excelData}

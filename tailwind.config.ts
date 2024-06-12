@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        '1060': {'max': '1060px'},
+      },
       fontFamily:{
         
       },

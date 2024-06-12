@@ -4,6 +4,8 @@ import Navigation from "./ui/navigation/navigation";
 import MainBanner from "./ui/main/mainBannerTest";
 import Maininfo from "./ui/main/mainIntro";
 import { notoSansKr } from "./font/font";
+import MainImgs from "./ui/main/mainImgs";
+import MainQuality from "./ui/main/mainQuality";
 
 const metadata: Metadata = {
   title: "거산테크",
@@ -21,6 +23,8 @@ export default function Home() {
         <Navigation/>
         <MainBanner/>
         <Maininfo/>
+        <MainQuality/>
+        <MainImgs/>
         <UnderCompanyInfo/>
       </main>
   );
