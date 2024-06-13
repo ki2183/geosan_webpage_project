@@ -44,7 +44,14 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
 }
-
+.main{
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
 .sideNav-container::after{
   content: "";
   position: absolute;

@@ -11,9 +11,10 @@ const config: Config = {
     extend: {
       screens: {
         '1060': {'max': '1060px'},
+        '1260': {'max': '1260px'},
       },
-      fontFamily:{
-        
+      gridTemplateColumns:{
+        'custom':'0.375fr 0.675fr'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
