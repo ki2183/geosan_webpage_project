@@ -50,9 +50,7 @@ export default function Excel(){
         {category: "의료기기", companyName: "서린바이오"},
         {category: "의료기기", companyName: "코렌텍"},
         {category: "방산", companyName: "한화(보은공장)"},
-        {category: "기타", companyName: "기타업체 다수"},
-
-        
+        {category: "기타", companyName: "기타업체 다수"},   
       ];
 
       const gridOptions = {

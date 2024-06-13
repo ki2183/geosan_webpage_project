@@ -77,3 +77,52 @@ export default function ImgMachine({src,classname}:ImgMachine_type){
         </>
     )
 }
+type return_machine_link_type = {
+    idx:number
+}
+export function return_machine_link({idx}:return_machine_link_type){
+    let link
+
+    switch (idx) {
+        case 0:
+            link = cnc1;
+            break;
+        case 1:
+            link = cnc2;
+            break;
+        case 2:
+            link = cnc3;
+            break;
+        case 3:
+            link = cnc4;
+            break;
+        case 4:
+            link = cnc5;
+            break;
+        case 5:
+            link = cnc6;
+            break;
+        case 6:
+            link = cnc7;
+            break;
+        case 7:
+            link = cnc8;
+            break;
+        case 8:
+            link = cnc9;
+            break;
+        case 9:
+            link = cnc10;
+            break;
+        case 10:
+            link = cnc11;
+            break;
+        case 11:
+            link = cnc12;
+            break;
+        default:
+            link = undefined;
+    }
+
+    return link
+}

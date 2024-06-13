@@ -14,7 +14,9 @@ const config: Config = {
         '1260': {'max': '1260px'},
       },
       gridTemplateColumns:{
-        'custom':'0.375fr 0.675fr'
+        'custom':'0.375fr 0.625fr',
+        'left':'0.375fr 0.625fr',
+        'right':'0.625fr 0.375fr'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

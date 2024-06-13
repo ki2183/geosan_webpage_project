@@ -7,7 +7,7 @@ import cnc2 from "../IMGs/cnc/kf6500.webp"
 import Imgs, { img_type } from "../ui/viewtools/imgs";
 import { return_machine_link } from "../IMGs/machine/IMGMACHINE";
 
-export function CNCInfo(){
+export function MeasureInfo(){
     return (
         <Info
             title="설비"
@@ -17,32 +17,7 @@ export function CNCInfo(){
     )
 }
 
-export function CNCImg(){
-    
-    const imgs:img_type[] = [
-        {
-            src:cnc1,
-            alt:""
-        },{
-            src:cnc2,
-            alt:""
-        },
-    ]
-
-    const img = Array.from({length:12},(_,idx)=>({
-        src:return_machine_link({idx}),
-        alt:`cnc_machine${idx+1}`
-    }))
-
-    return(
-        <Imgs
-            id_name="cnc_imgs"
-            imgs={img}
-        />
-    )
-}
-
-export function CNCExcel(){
+export function MeasureExcel(){
     const columnDefs: ColDef[] = [
         { headerName: "No.", valueGetter: 'node.rowIndex + 1',flex:0.6},
         { headerName: '관리번호', field: 'serial_num' , flex:1.5},
@@ -86,7 +61,7 @@ export function CNCExcel(){
     
     return (
         <Excel
-            reverse={false}
+            reverse={true}
             imgs={imgs}
             id_name="cnc_excel"
             cncDef={columnDefs}
