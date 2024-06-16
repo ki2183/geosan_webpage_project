@@ -8,27 +8,21 @@ import 'ag-grid-community/styles/ag-theme-balham.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import Image, { StaticImageData } from "next/image";
 
-type excel_type = {
-    id_name?:string
-    cncDef:ColDef[]
-    cncData:{
-        serial_num: string;
-        name: string;
-        date: string;
-        brand: string;
-    }[]
-    imgs:{
-        src:StaticImageData
-        class_name:string
-        alt:string
-    }[]
-    reverse:boolean
+type excel_types<T> = {
+    id_name?: string;
+    cncDef: ColDef[];
+    cncData: T[];
+    imgs: {
+        src: StaticImageData;
+        class_name: string;
+        alt: string;
+    }[];
+    reverse: boolean;
 }
 
-export default function Excel({
+export default function Excel<T>({
     cncDef,cncData,imgs,id_name,reverse
-}:excel_type){
-
+}:excel_types<T>){
     return(
         <section id={id_name} className="w-full h-auto">
             <div style={{ direction:`${reverse ?"rtl":"ltr"}`}} className={`grid-cols-left w-full h-auto grid gap-4 1260:grid-cols-1`}>

@@ -10,9 +10,9 @@ export default function Info({
 }:info_type){
     return (
         <section id={id_name} className="w-full">
-            <div className="box-border mx-auto flex flex-col gap-6 1060:bg-white 1060:p-10 1060:rounded-3xl 1060:shadow-md">
+            <div className="box-border mx-auto flex flex-col gap-6 ">
                 <span className="text-4xl font-bold">{title}</span>
-                <span className="text">{information}</span>
+                <span className="text text-gray-600">{information}</span>
             </div>
         </section>
     )
