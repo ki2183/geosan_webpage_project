@@ -1,4 +1,3 @@
-import ImgMachine from "@/app/IMGs/machine/IMGMACHINE"
 import style from "./mainImgs.module.scss"
 import ImgParts from "@/app/IMGs/parts/partsImgs"
 

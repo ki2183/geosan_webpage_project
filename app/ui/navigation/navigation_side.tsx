@@ -1,11 +1,8 @@
 
 import Image from "next/image"
 import logo from "../../IMGs/logo.png"
-import { useEffect, useRef, useState } from "react"
-import { getScrollY } from "@/app/li/getScrollY"
-import gsap from "gsap"
 export const nav_height = "2.5rem"
-import { notoSansKr } from "@/app/font/font"
+
 
 export default function Navigation(){
     const style = {

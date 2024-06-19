@@ -1,6 +1,5 @@
 "use client"
-
-import { useEffect } from "react";import Script from 'next/script';
+import Script from 'next/script';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
 
 const KAKAO_SDK_URL = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_JS_KEY}&autoload=false`;

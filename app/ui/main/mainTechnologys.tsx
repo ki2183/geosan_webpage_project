@@ -1,6 +1,5 @@
 import Image from "next/image"
 import iron from "../IMGs/iron-drawing.png"
-import setting from "../IMGs/setting.png"
 
 const mainTechnologyList = [
     {

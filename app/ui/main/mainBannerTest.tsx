@@ -1,6 +1,5 @@
 import plan from "../../IMGs/mainbanner/plan.png"
 import pattern from "../../IMGs/mainbanner/pattern.webp"
-import cnc from "../../IMGs/mainbanner/cnc.webp"
 import cnc_ from "../../IMGs/mainbanner/cnc_.webp"
 import Image from "next/image"
 import style from "./mainBanner.module.scss"

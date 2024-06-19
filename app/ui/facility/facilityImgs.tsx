@@ -1,5 +1,4 @@
 import ImgMachine from "@/app/IMGs/machine/IMGMACHINE"
-import style from "./facilityImgs.module.scss"
 
 export default function FacilityImgs(){
 

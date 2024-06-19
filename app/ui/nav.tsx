@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link";
-import vercel from "../../public/vercel.svg"
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 

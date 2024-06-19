@@ -1,7 +1,6 @@
 import handshake_icon from "../../IMGs/mainbanner/handshake.webp"
 import intro_icon from "../../IMGs/mainbanner/intro.webp"
 import measure_icon from "../../IMGs/mainbanner/measure_.webp"
-import MainIntroBox from "./mainIntroBox"
 import style from "./main.module.scss"
 import Image, { StaticImageData } from "next/image"
 
