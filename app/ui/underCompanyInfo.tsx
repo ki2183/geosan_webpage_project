@@ -3,7 +3,7 @@ import logo from "../IMGs/geosan_logo.png"
 
 export default function UnderCompanyInfo(){
     const container_style = {
-        gridTemplateColumns: "264px auto"
+        gridTemplateColumns: "144px auto"
     }
     const flex_center = "flex flex-col items-center justify-center"
     const flex_start = "flex flex-col items-start justify-center"
@@ -11,7 +11,7 @@ export default function UnderCompanyInfo(){
     return (
         <section id="under-company-info">
             <div style={container_style} className="w-full h-48 grid mt-5">
-                <div className={`${flex_center}`}>
+                <div className="flex flex-col items-center justify-center">
                     <Image
                         className="w-16"
                         src={logo}

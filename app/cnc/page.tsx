@@ -17,10 +17,14 @@ export default function Home(){
                 {/* <MeasureInfo/> */}
                 <MeasureExcel/>
                 <CNCImg/>
+                <div className="w-full">
+                    <UnderCompanyInfo/>
+                </div>
+                
             </div>
             
             
-            <UnderCompanyInfo/>
+            
     
         </main>
     )

@@ -42,9 +42,9 @@ export default function Home() {
                     colDef={excelDefs}
                     colData={excel_Data}
                 />
+                     <div className="mx-auto w-full">
+                <UnderCompanyInfo/>
             </div>
-            <div className="mx-auto 1060:w-full w-4/5">
-            <UnderCompanyInfo/>
             </div>
         </main>
     );

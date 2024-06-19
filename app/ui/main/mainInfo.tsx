@@ -74,8 +74,6 @@ function MaininfoItem({
                 <Image
                     src={url}
                     alt="img"
-                    objectFit="none"
-                    objectPosition="center"
                 />
             </div>
             <div className={style.container_box_text}>

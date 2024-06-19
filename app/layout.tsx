@@ -11,13 +11,6 @@ const metadata = {
   keywords:"ssr 렌더링, 키워드,아 몰라"
 };
 
-declare global {
-  interface Window {
-    kakao: any;
-  }
-  const kakao: any;
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,10 +26,10 @@ export default function RootLayout({
         <meta name="keywords" content={metadata.keywords}/>
       </head>
       <body className={inter.className}>
-        <Script
-          strategy="beforeInteractive"
-          src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${key}&libraries=services&autoload=false`}
-        ></Script>
+      {/* <Script
+          type='text/javascript'
+          src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_JS_KEY}&autoload=false`}
+        /> */}
         {children}
       </body>
     </html>

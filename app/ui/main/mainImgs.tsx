@@ -19,7 +19,6 @@ export default function MainImgs(){
                                         alt=""
                                         idx={idx}
                                         key={idx}
-                                        // class_name="h-[100%] mx-auto"
                                     />
                             </div>
                             
