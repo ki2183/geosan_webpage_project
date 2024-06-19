@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react"
 import { getScrollY } from "@/app/li/getScrollY"
 import gsap from "gsap"
 export const nav_height = "2.5rem"
-import { notoSansKr } from "@/app/font/font"
 
 export default function Navigation(){
     const style = {
@@ -48,6 +47,3 @@ export default function Navigation(){
         </section>
     )
 }
-
-
-// noto-sans-kr
