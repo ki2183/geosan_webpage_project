@@ -14,10 +14,10 @@ import cnc12 from "./cnc12.webp";
 
 type ImgMachine_type = {
     src:string,
-    classname?:string
+    class_name?:string
 }
 
-export default function ImgMachine({src,classname}:ImgMachine_type){
+export default function ImgMachine({src,class_name}:ImgMachine_type){
 
     let link
 
@@ -69,7 +69,7 @@ export default function ImgMachine({src,classname}:ImgMachine_type){
                     <Image 
                         src={link}
                         alt={src}
-                        className={classname}
+                        className={class_name}
                     />      
                     : null
             }

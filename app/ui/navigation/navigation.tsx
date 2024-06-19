@@ -23,13 +23,14 @@ export default function Navigation(){
     },[])
 
     useEffect(()=>{
-        gsap.to(navRef.current,{
+        const currentNavRef = navRef.current;
+        gsap.to(currentNavRef,{
             duration:0.2,
             top:scollY > 48 ? 0 : -48
         })
 
         return ()=>
-            gsap.killTweensOf(navRef.current)
+            gsap.killTweensOf(currentNavRef)
     },[scollY])
 
     return(

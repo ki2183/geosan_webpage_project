@@ -13,11 +13,10 @@ export default function MainImgs(){
                 <div className={`${style.containerImgBox}`}>
                     {
                         Array.from({length:6}).map((_,idx)=>(
-                            <div className={`${style.imgbox}`}>
+                            <div key={idx} className={`${style.imgbox}`}>
                                      <ImgParts
                                         alt=""
                                         idx={idx}
-                                        key={idx}
                                     />
                             </div>
                             

@@ -1,4 +1,3 @@
-import Script from "next/script";
 import Navigation from "../ui/navigation/navigation_side";
 import KakaoMap from "./kakaomap";
 import { notoSansKr } from "../font/font";
@@ -29,7 +28,7 @@ export default function Home() {
               
               <div className="flex flex-col w-full text-gray-800 mt-16 gap-5">
                 <span className="text-2xl">
-                    "오래되었지만 늘 새로운 기업"
+                    오래되었지만 늘 새로운 기업
                   </span>
                 <div className="grid grid-cols-right 1060:grid-cols-1">
                  
