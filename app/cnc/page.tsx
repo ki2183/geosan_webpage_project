@@ -14,7 +14,6 @@ export default function Home(){
                 <Location id_name="cnc_location"/>
                 <CNCInfo/>
                 <CNCExcel/>
-                {/* <MeasureInfo/> */}
                 <MeasureExcel/>
                 <CNCImg/>
                 <div className="w-full">
