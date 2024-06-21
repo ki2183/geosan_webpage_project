@@ -1,3 +1,4 @@
+import Link from "next/link"
 import handshake_icon from "../../IMGs/mainbanner/handshake.webp"
 import intro_icon from "../../IMGs/mainbanner/intro.webp"
 import measure_icon from "../../IMGs/mainbanner/measure_.webp"
@@ -15,18 +16,21 @@ export default function Maininfo(){
     }
     const info = [
         {
-            title:"설비",
-            info:"cnc,탬핑기계등 보유 기계 현황",
-            url:intro_icon
+            title:"소개",
+            info:"거산테크 회사  소개",
+            url:intro_icon,
+            link:"/introduce"
         },
         {
-            title:"측정",
+            title:"설비/측정",
             info:"cnc,탬핑기계등 보유 기계 현황",
-            url:measure_icon
+            url:measure_icon,
+            link:"/cnc"
         },{
             title:"거래처",
             info:"거래중인 회사 목록",
-            url:handshake_icon
+            url:handshake_icon,
+            link:"vendor"
         },
     ]
     return(
@@ -42,13 +46,18 @@ export default function Maininfo(){
                     <div className="container-box mr-auto ml-auto flex pt-9 gap-9 items-center justify-center">        
 
                         {
-                            info.map(({url,info,title},idx)=>(
-                                <MaininfoItem
+                            info.map(({url,info,title,link},idx)=>(
+                                <Link
+                                    href={link}
                                     key={idx}
-                                    url={url}
-                                    info={info}
-                                    title={title}
-                                />
+                                >
+                                    <MaininfoItem
+                                        
+                                        url={url}
+                                        info={info}
+                                        title={title}
+                                    />
+                                </Link>
                             ))
                         }
 

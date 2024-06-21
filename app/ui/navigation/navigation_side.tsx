@@ -1,6 +1,7 @@
 
 import Image from "next/image"
 import logo from "../../IMGs/logo.png"
+import NavigationButton from "./navigationButton"
 export const nav_height = "2.5rem"
 
 
@@ -18,8 +19,19 @@ export default function Navigation(){
                     <Image className="w-8 h-8 " alt="로고" src={logo}/>
                     <span className="text-sm font-bold">거산테크</span>
                 </div>  
-                <div className="ml-4 mr-7">
-                    기술
+                <div className="ml-4 mr-10 flex gap-4">
+                    <NavigationButton 
+                        link="introduce"
+                        title="소개"
+                    />
+                     <NavigationButton 
+                        link="cnc"
+                        title="설비"
+                    />
+                    <NavigationButton 
+                        link="vendor"
+                        title="거래처"
+                    />
                 </div>
             </div>
         </section>

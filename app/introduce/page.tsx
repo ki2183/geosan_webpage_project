@@ -1,8 +1,12 @@
+"use client"
+
 import Navigation from "../ui/navigation/navigation_side";
 import KakaoMap from "./kakaomap";
 import { notoSansKr } from "../font/font";
 import UnderCompanyInfo from "../ui/underCompanyInfo";
-
+import Location from "../ui/location";
+import Script from "next/script";
+const KAKAO_SDK_URL = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_JS_KEY}&autoload=false`;
 export default function Home() {
   return (
     <>
@@ -10,7 +14,8 @@ export default function Home() {
           <Navigation/>
           <div className="mt-12 pt-12 flex flex-col items-center max-w-[1080px] mx-auto w-4/5 gap-12">
             <section className="w-full">
-              <div className="flex flex-col gap-16">
+              <Location/>
+              <div className="flex flex-col gap-16 mt-11">
                 <h1 className="text-4xl font-bold">CEO인삿말</h1>
                 <div className="flex flex-col text-2xl text-gray-600">
                   <span>고객 기대에 부응하는 회사, 신뢰받는 회사가 될 것을</span>

@@ -19,8 +19,6 @@ export default function MainImgs(){
                                         idx={idx}
                                     />
                             </div>
-                            
-                       
                         ))
                     }
                   

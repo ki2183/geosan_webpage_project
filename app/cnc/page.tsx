@@ -1,12 +1,17 @@
+import { sql } from "@vercel/postgres";
 import { notoSansKr } from "../font/font";
 import Location from "../ui/location";
 import Navigation from "../ui/navigation/navigation_side";
 import UnderCompanyInfo from "../ui/underCompanyInfo";
-import Info from "../ui/viewtools/info";
-import { CNCExcel, CNCImg, CNCInfo } from "./cnctools";
+// import { CNCExcel, CNCImg, CNCInfo } from "./cnctools";
 import { MeasureExcel, MeasureInfo } from "./measure";
+import { fetch_cnc_data_type } from "../api/fetchCncData/route";
+import { CNCInfo } from "./cncInfo";
+import CNCExcel from "./cncExcel";
+import CNCImg from "./cncImg";
 
 export default function Home(){
+    const cncData: fetch_cnc_data_type[] = [];
     return (
         <main className={`${notoSansKr.className} main`}>
             <Navigation/>

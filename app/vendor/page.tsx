@@ -3,26 +3,19 @@ import Location from "../ui/location";
 import { ColDef } from "ag-grid-community";
 import { Excel } from "../ui/vendor/excel";
 import UnderCompanyInfo from "../ui/underCompanyInfo";
+import fetch_vendor_data from "../api/fetchVendorData/router";
+import { use, useEffect } from "react";
+import { sql } from "@vercel/postgres";
+import fetch_cnc_data from "../api/fetchCncData/route";
 
-export default function Home() {
+export default async function Home() {
 
     const excelDefs: ColDef[] = [
         { headerName: '구분', field: 'category', flex: 2 },
-        { headerName: '주요업체명', field: 'companyName', flex: 3 }
+        { headerName: '주요업체명', field: 'companyname', flex: 3 }
     ];
 
-
-    const excel_Data = [
-        {category: "반도체장비", companyName: "유진테크"},
-        {category: "반도체장비", companyName: "주성엔지니어링"},
-        {category: "반도체장비", companyName: "브륵스"},
-        {category: "반도체장비", companyName: "피에스케이"},
-        {category: "광학장비", companyName: "뮤텍코리아"},
-        {category: "의료기기", companyName: "서린바이오"},
-        {category: "의료기기", companyName: "코렌텍"},
-        {category: "방산", companyName: "한화(보은공장)"},
-        {category: "기타", companyName: "기타업체 다수"},   
-      ];
+    const excelData = await fetch_vendor_data()
 
     return (
         <main className="relative min-h-screen w-screen flex flex-col items-center">
@@ -40,7 +33,7 @@ export default function Home() {
                 <Excel
                     id_name="vendor_excel"
                     colDef={excelDefs}
-                    colData={excel_Data}
+                    colData={excelData}
                 />
                      <div className="mx-auto w-full">
                 <UnderCompanyInfo/>

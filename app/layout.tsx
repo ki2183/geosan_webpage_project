@@ -17,7 +17,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const key = "263e15a06788d9ffb0b6279c49dd2c56"
   return (
     <html lang="en">
       <head>
@@ -26,10 +25,6 @@ export default function RootLayout({
         <meta name="keywords" content={metadata.keywords}/>
       </head>
       <body className={inter.className}>
-      {/* <Script
-          type='text/javascript'
-          src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_JS_KEY}&autoload=false`}
-        /> */}
         {children}
       </body>
     </html>

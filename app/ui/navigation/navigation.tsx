@@ -5,6 +5,7 @@ import logo from "../../IMGs/logo.png"
 import { useEffect, useRef, useState } from "react"
 import { getScrollY } from "@/app/li/getScrollY"
 import gsap from "gsap"
+import NavigationButton from "./navigationButton"
 export const nav_height = "2.5rem"
 
 export default function Navigation(){
@@ -12,7 +13,7 @@ export default function Navigation(){
         color:"white"
     }
 
-    const [scollY,setScrollY] = useState<number>(0)
+    const [scrollY,setScrollY] = useState<number>(0)
     const navRef = useRef<HTMLDivElement>(null)
     
 
@@ -26,25 +27,40 @@ export default function Navigation(){
         const currentNavRef = navRef.current;
         gsap.to(currentNavRef,{
             duration:0.2,
-            top:scollY > 48 ? 0 : -48
+            top:scrollY > 48 ? 0 : -48
         })
 
         return ()=>
             gsap.killTweensOf(currentNavRef)
-    },[scollY])
+    },[scrollY])
 
     return(
         <section style={style} id="navigation" className={`z-20 fixed top-0 w-screen h-12`}>
             <div ref={navRef}className="nav-bg fixed w-screen h-12"/>
-            <div style={{color:scollY > 48 ? "black" : "white" }} className="w-screen h-full flex flex-row items-center justify-between">
+            <div style={{color:scrollY > 48 ? "black" : "white" }} className="w-screen h-full flex flex-row items-center justify-between">
                 <div className="flex items-center justify-center ml-4 mr-4 gap-2">
                     <Image className="w-8 h-8 " alt="로고" src={logo}/>
                     <span className="text-sm font-bold">거산테크</span>
                 </div>  
-                <div className="ml-4 mr-7">
-                    기술
+                <div className="ml-4 mr-10 flex gap-4">
+                    <NavigationButton 
+                        link="introduce"
+                        title="소개"
+                        scrollY={scrollY}
+                    />
+                     <NavigationButton 
+                        link="cnc"
+                        title="설비"
+                        scrollY={scrollY}
+                    />
+                    <NavigationButton 
+                        link="vendor"
+                        title="거래처"
+                        scrollY={scrollY}
+                    />
                 </div>
             </div>
         </section>
     )
 }
+
