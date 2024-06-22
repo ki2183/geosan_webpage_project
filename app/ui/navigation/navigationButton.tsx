@@ -15,12 +15,6 @@ interface NavigationButtonInterface {
     const pathname = usePathname();
     return(
         <Link href={`/${link}`}>
-            {/* <div className={`
-                ${style.button} 
-                ${!scrollY ? "after:bg-[#1D3A44]" :
-                    scrollY > 48 ? "after:bg-[#1D3A44]":""
-                }
-            `}> */}
             <div className={clsx(
                 `${style.button}`,
                 {

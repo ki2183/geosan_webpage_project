@@ -1,8 +1,6 @@
 import { ColDef } from "ag-grid-community";
 import Excel from "../ui/viewtools/excel";
 import Info from "../ui/viewtools/info";
-import cnc1 from "../IMGs/cnc/cnc550.webp"
-import cnc2 from "../IMGs/cnc/kf6500.webp"
 import measure1 from "../IMGs/measure/measure1.webp"
 import measure2 from "../IMGs/measure/measure2.webp"
 import fetch_measure_data from "../api/fetchMeasureData/route";
@@ -27,23 +25,6 @@ export async function MeasureExcel(){
         { headerName: '구입처', field: 'brand',flex:1},
     ];
     const excelData = await fetch_measure_data()
-    // const excelData = [
-    //     { name: "Gauge Block", standard: "0.5T ~ 100T", brand: "BLUETEL", date: "17.02.01" },
-    //     { name: "내경 측정기", standard: "135￠(0.01)", brand: "TECLOCK", date: "17.02.01" },
-    //     { name: "Digital Vernier Calipers", standard: "600mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Digital Vernier Calipers", standard: "300mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Digital Vernier Calipers", standard: "60mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Micro Meter(아날로그)", standard: "0~25mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Micro Meter(아날로그)", standard: "25~50mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Micro Meter(아날로그)", standard: "100~125mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Micro Meter(아날로그)", standard: "75~100mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Micro Meter(아날로그)", standard: "100~125mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Micro Meter(아날로그)", standard: "125~150mm/0.01mm", brand: "BLUEBIRD", date: "17.02.01" },
-    //     { name: "Micro Meter(아날로그)", standard: "75~100mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Cylinder Gauge", standard: "18~35mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Cylinder Gauge", standard: "35~60mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" },
-    //     { name: "Cylinder Gauge", standard: "50~150mm/0.01mm", brand: "MITUTOYO", date: "17.02.01" }
-    // ];
 
     const imgs = [
         {

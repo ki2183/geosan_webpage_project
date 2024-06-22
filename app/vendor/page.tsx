@@ -21,7 +21,7 @@ export default async function Home() {
         <main className="relative min-h-screen w-screen flex flex-col items-center">
             <Navigation/>
             <div className="max-w-[1080px] m-12 w-4/5 h-auto pt-12 flex flex-col gap-12">
-                <Location/>
+                <Location id_name="vendor_location" title="거래처"/>
                 <div className="flex flex-col gap-5">
                     <span className="text-4xl font-bold">
                         거래처

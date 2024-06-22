@@ -1,7 +1,6 @@
-import { Metadata } from "next";
 import UnderCompanyInfo from "./ui/underCompanyInfo";
 import Navigation from "./ui/navigation/navigation";
-import MainBanner from "./ui/main/mainBannerTest";
+import MainBanner from "./ui/main/mainBanner";
 import Maininfo from "./ui/main/mainInfo";
 import { notoSansKr } from "./font/font";
 import MainImgs from "./ui/main/mainImgs";

@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react"
 import { getScrollY } from "@/app/li/getScrollY"
 import gsap from "gsap"
 import NavigationButton from "./navigationButton"
+import Link from "next/link"
 export const nav_height = "2.5rem"
 
 export default function Navigation(){
@@ -38,10 +39,12 @@ export default function Navigation(){
         <section style={style} id="navigation" className={`z-20 fixed top-0 w-screen h-12`}>
             <div ref={navRef}className="nav-bg fixed w-screen h-12"/>
             <div style={{color:scrollY > 48 ? "black" : "white" }} className="w-screen h-full flex flex-row items-center justify-between">
-                <div className="flex items-center justify-center ml-4 mr-4 gap-2">
-                    <Image className="w-8 h-8 " alt="로고" src={logo}/>
-                    <span className="text-sm font-bold">거산테크</span>
-                </div>  
+                <Link className="cursor-pointer" href="/">
+                    <div className="flex items-center justify-center ml-4 mr-4 gap-2">
+                        <Image className="w-8 h-8 " alt="로고" src={logo}/>
+                        <span className="text-sm font-bold">거산테크</span>
+                    </div>
+                </Link>  
                 <div className="ml-4 mr-10 flex gap-4">
                     <NavigationButton 
                         link="introduce"

@@ -6,10 +6,11 @@ export default function MainImgs(){
         <section id="main-imgs">
             <div className={`${style.container} `}>
             <div className="inline-block rounded-lg w-8 opacity-45 h-1 bg-gray-100 text-sm bg-main">
-                {/* Precision Manufacturing */}
               </div>
                 <span className="text-4xl font-bold text-gray-950">신뢰 가능한 제품</span>
-                <span className="text-gray-400 w-3/4">당사의 CNC 가공 전문 지식은 다양한 분야에 걸쳐 업계 최고의 고객으로부터 신뢰를 얻었습니다. 우리의 포트폴리오를 탐색하여 우리가 제공한 탁월한 작업을 확인하세요.</span>
+                <span className="text-gray-400">
+                    거산테크는 높은 품질의 제품을 보장하겠습니다.
+                </span>
                 <div className={`${style.containerImgBox}`}>
                     {
                         Array.from({length:6}).map((_,idx)=>(

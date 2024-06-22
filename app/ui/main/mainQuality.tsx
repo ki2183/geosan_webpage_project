@@ -35,8 +35,8 @@ export default function MainQuality(){
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">엄격한 QC</h3>
                   <p className="text-gray-400 dark:text-gray-400">
-                    Our parts undergo a comprehensive inspection process, ensuring they meet the most stringent
-                    quality standards.
+                    당사는 CNC 가공의 정밀도와 일관성을 보장합니다. 
+                    엄격한 품질 기준을 준수하여 고객이 기대하는 수준의 제품을 제공합니다.
                   </p>
                 </div>
               </li>
@@ -44,8 +44,7 @@ export default function MainQuality(){
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">지속적인 개선</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    We constantly refine our processes and invest in the latest technologies to deliver unparalleled
-                    quality and efficiency.
+                    지속적인 개선을 통해 생산 효율성과 품질을 꾸준히 향상시키고 있습니다. 고객의 피드백을 적극 반영하여 제품과 서비스의 완성도를 높이고 있습니다.
                   </p>
                 </div>
               </li>
@@ -53,8 +52,7 @@ export default function MainQuality(){
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">신뢰성</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Our commitment to sustainability is reflected in our eco-friendly manufacturing practices and
-                    responsible material sourcing.
+                    당사는 뛰어단 신뢰성을  바탕으로 고객의 믿음을 얻고 있스빈다. 엄격한 품질 관리와 검증된 프로세스를 통해 일관된 성능과 높은 품질을 보장하며, 모든 제품은 신뢰할 수 있는 기준에 따라 제작됩니다.
                   </p>
                 </div>
               </li>
