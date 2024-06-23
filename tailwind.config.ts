@@ -12,6 +12,7 @@ const config: Config = {
       screens: {
         '1060': {'max': '1060px'},
         '1260': {'max': '1260px'},
+        '1350': {'max': '1350px'},
       },
       gridTemplateColumns:{
         'custom':'0.375fr 0.625fr',

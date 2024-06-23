@@ -19,18 +19,18 @@ export default function Maininfo(){
             title:"소개",
             info:"거산테크 회사  소개",
             url:intro_icon,
-            link:"/introduce"
+            link:"/introduce",
         },
         {
             title:"설비/측정",
             info:"cnc,탬핑기계등 보유 기계 현황",
             url:measure_icon,
-            link:"/cnc"
+            link:"/cnc",
         },{
             title:"거래처",
             info:"거래중인 회사 목록",
             url:handshake_icon,
-            link:"vendor"
+            link:"vendor",
         },
     ]
     return(
@@ -52,7 +52,6 @@ export default function Maininfo(){
                                     key={idx}
                                 >
                                     <MaininfoItem
-                                        
                                         url={url}
                                         info={info}
                                         title={title}
@@ -76,19 +75,26 @@ type MainIntroItem_type = {
 function MaininfoItem({
     url,info,title
 }:MainIntroItem_type){
+    const styl_ = {
+        top: "50%",
+        left: "50%",
+        transform: 'translate(-50%, -50%)',
+        position: 'absolute',
+
+    }
     return(
         <div className={style.container_box}>
             <div className={style.container_box_img}>
                 <Image
                     src={url}
                     alt="img"
+                    className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] scale-[1.2]"
                 />
             </div>
             <div className={style.container_box_text}>
                 <span>{title}</span>
                 <span>{info}</span>
-            </div>
-            
+            </div>            
         </div>
     )
 }

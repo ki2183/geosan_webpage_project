@@ -44,14 +44,16 @@ $h-mobile:80vw * 0.475;
     height: $max-h-mobile;
 
   }
+  &>span{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.557);
+    bottom:1rem;
+  }
 }
 .container_box_img{
-  // background-color: blue;
   max-width: 800px;
   height: auto;
-  // opacity: 0.1;
   width: 50vw;
-  // scale: 0.6;
   position: absolute;
   transition: all 0.5s;
   @media (max-width:1024px) {
