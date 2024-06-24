@@ -2,22 +2,21 @@ import Link from "next/link"
 import handshake_icon from "../../IMGs/mainbanner/handshake.webp"
 import intro_icon from "../../IMGs/mainbanner/intro.webp"
 import measure_icon from "../../IMGs/mainbanner/measure_.webp"
-import style from "./main.module.scss"
+import style from "./mainInfo.module.scss"
 import Image, { StaticImageData } from "next/image"
 
+interface contents {
+    title:string,
+    info:string,
+    url:StaticImageData,
+    link:string
+}
 
 export default function Maininfo(){
-    const maxWidth_style = {
-        maxWidth :"1080px"
-    }
-    const box_style = {
-        width:"5rem",
-        height:"5rem",
-    }
-    const info = [
+    const info:contents[] = [
         {
             title:"소개",
-            info:"거산테크 회사  소개",
+            info:"거산테크 회사소개",
             url:intro_icon,
             link:"/introduce",
         },
@@ -36,34 +35,50 @@ export default function Maininfo(){
     return(
         <section id="main-info" className="noto-sans-kr">
             <div className="w-screen h-auto flex flex-col items-center justify-center">
-                <div>
-                    <h1 className="text-3xl font-bold pt-12 color-main">
-                        서비스
-                    </h1>
-                    <div className="w-8 h-1 bg-main mt-2 bg-main opacity-60" id="title-line"/>
-                </div>
-               <div className="w-full h-auto">
-                    <div className="container-box mr-auto ml-auto flex pt-9 gap-9 items-center justify-center">        
-
-                        {
-                            info.map(({url,info,title,link},idx)=>(
-                                <Link
-                                    href={link}
-                                    key={idx}
-                                >
-                                    <MaininfoItem
-                                        url={url}
-                                        info={info}
-                                        title={title}
-                                    />
-                                </Link>
-                            ))
-                        }
-
-                    </div>
-               </div>
+                <MaininfoTitle title="서비스"/>
+               <MaininfoContentBox info={info}/>
             </div>
         </section>
+    )
+}
+interface title {
+    title:string
+}
+function MaininfoTitle({title}:title){
+    return(
+        <div>
+            <h1 className="text-3xl font-bold pt-12 color-main">
+                {title}
+            </h1>
+            <div className="w-8 h-1 bg-main mt-2 bg-main opacity-60" id="title-line"/>
+        </div>
+    )
+}
+interface maininfoContentBox{
+    info:contents[]
+}
+function MaininfoContentBox({info}:maininfoContentBox){
+    return(
+        <div className="w-full h-auto">
+            <div className="container-box mr-auto ml-auto flex pt-9 gap-9 items-center justify-center">        
+
+                {
+                    info.map(({url,info,title,link},idx)=>(
+                        <Link
+                            href={link}
+                            key={idx}
+                        >
+                            <MaininfoItem
+                                url={url}
+                                info={info}
+                                title={title}
+                            />
+                        </Link>
+                    ))
+                }
+
+            </div>
+        </div>
     )
 }
 

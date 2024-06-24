@@ -62,28 +62,8 @@ export  async function CNCExcel({ res }: InferGetServerSidePropsType<typeof getS
         { headerName: '구입년도', field: 'date',flex:1},
         { headerName: '구입처', field: 'brand',flex:1},
     ];
-    const data = await fetch_cnc_data()
     const dto = await fetch_cnc_dto()
     const excelData = dto
-
-    // const excelData = [
-    //     {serial_num: "F650PLUS(10,000RPM)", name: "머시닝센타",date:"2017.02",brand:"현대위아" },
-    //     {serial_num: "F650PLUS(8,000RPM)", name: "머시닝센타",date:"2017.02",brand:"현대위아" },
-    //     {serial_num: "F550M(15,000RPM)", name: "머시닝센타", date:"2017.06",brand:"현대위아" },
-    //     {serial_num: "F550M(15,000RPM)", name: "탭핑센타",date:"2017.06",brand:"현대위아" },
-    //     {serial_num: "F500", name: "머시닝센타",date:"2021.04",brand:"현대위아" },
-    //     {serial_num: "VX650", name: "머시닝센타",date:"2021.05",brand:"현대위아" },
-    //     {serial_num: "VX650", name: "머시닝센타",date:"2021.08",brand:"현대위아" },
-    //     {serial_num: "VX3801D", name: "탭핑센타",date:"2022.03",brand:"현대위아" },
-    //     {serial_num: "KF5600", name: "머시닝센타",date:"2022.12",brand:"현대위아" },
-    //     {serial_num: "FX2-200T", name: "컴퓨레샤",date:"2017.01",brand:"COMP KOR" },
-    //     {serial_num: "STD-410", name: "탁상드릴",date:"2017.02",brand:"삼천리" },
-    //     {serial_num: "PUMA-400", name: "터닝머신(CNC)",date:"2017.02",brand:"두산인프라" },
-    //     {serial_num: "PUMA-230B", name: "터닝머신(CNC)",date:"2017.02",brand:"두산인프라" },
-    //     {serial_num: "PUMA-240B", name: "터닝머신(CNC)",date:"2017.02",brand:"두산인프라" },
-    //     {serial_num: "PUMA-280", name: "터닝머신(CNC)",date:"2017.02",brand:"두산인프라" },
-    //     {serial_num: "PUMA-GT2600L", name: "터닝머신(CNC)",date:"2019.01",brand:"두산인프라" },
-    // ];
 
     const imgs = [
         {

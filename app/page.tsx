@@ -14,6 +14,7 @@ export default function Home() {
         <Maininfo/>
         <MainQuality/>
         <MainImgs/>
+        
         <div className="w-[80%] mx-auto max-w-[1080px]">
           <UnderCompanyInfo/>
         </div>

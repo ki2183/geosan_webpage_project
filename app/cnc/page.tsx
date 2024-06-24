@@ -9,7 +9,6 @@ import CNCExcel from "./cncExcel";
 import CNCImg from "./cncImg";
 
 export default function Home(){
-    const cncData: fetch_cnc_data_type[] = [];
     return (
         <main className={`${notoSansKr.className} main`}>
             <Navigation/>
@@ -24,10 +23,6 @@ export default function Home(){
                 </div>
                 
             </div>
-            
-            
-            
-    
         </main>
     )
 }
