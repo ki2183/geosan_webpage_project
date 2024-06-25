@@ -3,7 +3,7 @@ import Location from "../ui/location";
 import { ColDef } from "ag-grid-community";
 import { Excel } from "../ui/vendor/excel";
 import UnderCompanyInfo from "../ui/underCompanyInfo";
-import fetch_vendor_data from "../api/fetchVendorData/fetchVendorData"; 
+import fetch_vendor_data from "../fetch/fetchVendorData/fetchVendorData"; 
 
 export default async function Home() {
 

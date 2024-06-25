@@ -3,7 +3,7 @@ import { ColDef } from "ag-grid-community";
 import Excel from "../ui/viewtools/excel";
 import cnc1 from "../IMGs/cnc/cnc550.webp"
 import cnc2 from "../IMGs/cnc/kf6500.webp"
-import fetch_cnc_data from "../api/fetchCncData/fetchCncData";
+import fetch_cnc_data from "../fetch/fetchCncData/fetchCncData";
 
 async function CNCExcel(){
     

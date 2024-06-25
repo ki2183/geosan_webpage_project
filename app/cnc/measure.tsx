@@ -3,7 +3,7 @@ import Excel from "../ui/viewtools/excel";
 import Info from "../ui/viewtools/info";
 import measure1 from "../IMGs/measure/measure1.webp"
 import measure2 from "../IMGs/measure/measure2.webp"
-import fetch_measure_data from "../api/fetchMeasureData/fetchMeasureData"; 
+import fetch_measure_data from "../fetch/fetchMeasureData/fetchMeasureData"; 
 
 
 export function MeasureInfo(){
