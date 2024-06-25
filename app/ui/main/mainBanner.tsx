@@ -41,7 +41,7 @@ function MainBannerIntro(){
                 <h1 className="text-5xl font-bold">
                     거산테크
                 </h1>
-                <span className="text-lg leading-7">거산테크는 설립기간은 길지 않지만 풍부한 경험과 경력을 바탕으로 하여 최고의 품질의 정밀부품가공을 진행하고 있으며 항상 고객감동을 추구 합니다.</span>
+                <span className="text-lg leading-7">풍부한 경험과 경력을 바탕으로 하여 최고의 품질의 정밀부품가공을 진행하고 있으며 항상 고객감동을 추구하는 강소기업 입니다.</span>
                 <Link href="/introduce">
                     <div className="w-full flex">
                             <Mainbutton/>

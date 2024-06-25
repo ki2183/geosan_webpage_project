@@ -44,7 +44,7 @@ function QualityInfoTitle(){
       <div className="space-y-2">
         <div className="inline-block rounded-lg w-16 opacity-45 bg-gray-100 px-3 h-1 text-sm bg-main">
         </div>
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">우리는 품질과 타협하지 않습니다.</h2>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">품질과 타협하지 않습니다.</h2>
         <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
           언제나 최고의 서비스를 약속합니다.
         </p>

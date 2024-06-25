@@ -5,7 +5,6 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import 'ag-grid-community/styles/ag-theme-balham.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
-import { useEffect } from "react";
 
 type excel_type<T> = {
     id_name?:string

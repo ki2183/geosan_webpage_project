@@ -10,7 +10,7 @@ export type fetch_cnc_data_type = {
 
 export default async function fetch_cnc_data() {
   try {
-    const data = await sql<fetch_cnc_data_type>`SELECT * FROM cnc`;
+    const data = await sql`SELECT * FROM cnc`;
     return data.rows
   } catch (err) {
     console.error("Database Error:", err);

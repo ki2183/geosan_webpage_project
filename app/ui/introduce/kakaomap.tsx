@@ -1,10 +1,6 @@
 "use client"
 
-import Script from 'next/script';
-import { JSXElementConstructor, useEffect, useState } from 'react';
 import { Map, MapMarker, useKakaoLoader } from 'react-kakao-maps-sdk';
-
-const KAKAO_SDK_URL = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_JS_KEY}&autoload=false`;
 
 declare global {
     interface Window {

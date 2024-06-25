@@ -3,7 +3,6 @@ import Location from "../ui/location";
 import Navigation from "../ui/navigation/navigation_side";
 import UnderCompanyInfo from "../ui/underCompanyInfo";
 import { MeasureExcel, MeasureInfo } from "./measure";
-import { fetch_cnc_data_type } from "../api/fetchCncData/route";
 import { CNCInfo } from "./cncInfo";
 import CNCExcel from "./cncExcel";
 import CNCImg from "./cncImg";

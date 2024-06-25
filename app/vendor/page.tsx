@@ -3,10 +3,7 @@ import Location from "../ui/location";
 import { ColDef } from "ag-grid-community";
 import { Excel } from "../ui/vendor/excel";
 import UnderCompanyInfo from "../ui/underCompanyInfo";
-import fetch_vendor_data from "../api/fetchVendorData/router";
-import { use, useEffect } from "react";
-import { sql } from "@vercel/postgres";
-import fetch_cnc_data from "../api/fetchCncData/route";
+import fetch_vendor_data from "../api/fetchVendorData/fetchVendorData"; 
 
 export default async function Home() {
 

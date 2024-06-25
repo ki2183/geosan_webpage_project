@@ -8,7 +8,7 @@ export default function CNCImg(){
     const imgs:img_type[] = [
         {
             src:cnc1,
-            alt:""
+            alt:"cnc_mahc"
         },{
             src:cnc2,
             alt:""

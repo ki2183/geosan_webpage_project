@@ -10,7 +10,7 @@ export type fetch_measure_data_type = {
 
 export default async function fetch_measure_data() {
     try {
-        const data = await sql<fetch_measure_data_type>`SELECT * FROM measure`;
+        const data = await sql`SELECT * FROM measure`;
         return data.rows
     } catch (err) {
         console.error("Database Error:", err);

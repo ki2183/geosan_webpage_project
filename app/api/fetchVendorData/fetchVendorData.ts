@@ -4,12 +4,11 @@ export type fetch_vendor_data_type = {
     id:number
     category:string
     companyname:string
-    
 };
 
 export default async function fetch_vendor_data() {
     try {
-        const data = await sql<fetch_vendor_data_type>`SELECT * FROM vendor`;
+        const data = await sql<fetch_vendor_data_type[]>`SELECT * FROM vendor`;
         return data.rows
     } catch (err) {
         console.error("Database Error:", err);

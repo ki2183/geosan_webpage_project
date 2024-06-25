@@ -8,6 +8,7 @@ import MainQuality from "./ui/main/mainQuality";
 
 export default function Home() {
   return (
+    <>
       <main className={`${notoSansKr.className} relative min-h-screen w-screen flex flex-col`}>
         <Navigation/>
         <MainBanner/>
@@ -20,5 +21,6 @@ export default function Home() {
         </div>
         
       </main>
+    </>
   );
 }

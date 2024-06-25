@@ -7,8 +7,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 interface Metadata {
   title: string;
-  description: string;
-  keywords:string;
   icons: {
     icon: string;
   };
@@ -17,8 +15,6 @@ interface Metadata {
 
 export const metadata: Metadata = {
 	title: "거산테크",
-	description: "2차 가공",
-  keywords:"cnc가공 주물",
 	icons: {
 		icon: "/geosan_logo.webp",
 	},
@@ -32,15 +28,14 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      {/* <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description}/>
-        <meta name="keywords" content={metadata.keywords}/>
-      </head> */}
       <Head>
         <title>{metadata.title}</title>
-          <meta name="description" content={metadata.description} />
-          <link rel="icon" href={metadata.icons.icon} />
+        <link rel="icon" href={metadata.icons.icon} />
+        <meta httpEquiv="X-UA_Compatible" content="IE=edge,chrome=1"/>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="김기준" content="NewmanGrove"/>
+        <meta name="keywords" content="정밀가공"/>
+        <meta name="description" content="산업기계 설비, 반도체 장비 부품, 소재, 정밀가공"/>
       </Head>
       <body className={inter.className}>
         {children}
