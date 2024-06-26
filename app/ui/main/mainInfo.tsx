@@ -22,7 +22,7 @@ export default function Maininfo(){
         },
         {
             title:"설비/측정",
-            info:"cnc,탬핑기계등 보유 기계 현황",
+            info:"cnc,MCT등 보유 기계 현황",
             url:measure_icon,
             link:"/cnc",
         },{
