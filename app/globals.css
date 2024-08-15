@@ -8,102 +8,46 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-.bg-main{
-  background-color: #1D3A44;
-}.color-main{
-  color: #1D3A44;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
 body {
-  /* color: rgb(var(--foreground-rgb)); */
-  overflow-x: hidden;
-  background-color: rgb(236, 236, 236);;
+	line-height: 1;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+ol, ul {
+	list-style: none;
 }
-.ag-cell{
-  font-size: 11px;
+blockquote, q {
+	quotes: none;
 }
-
-.container-grid{
-  grid-template-columns: 264px auto;
-  overflow: hidden;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-.noto-sans-kr{
-  font-family: "Noto Sans KR", sans-serif;
-  font-optical-sizing: auto;
-}
-.main{
-  position: relative;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
-}
-.sideNav-container::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  z-index: 0;
-}
-.container-box{
-  flex-direction: row;
-}.main-cnc-img{
-  display: block;
-}.main-plan-img{
-  width: 80%;
-  display: none;
-}.main-info-contents-box{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}.main-info-contents-box>div{
-  max-width: 420px;
-}.container-mainBanner{
-  height: 70vh;
-}.nav-bg{
-  background-color: rgb(236, 236, 236);
-  z-index: -1;
-  top:-3rem;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.516);
-}
-/* ---------------모바일---------------- */
-@media (max-width: 1024px) {
-  .container-mainBanner{
-    height: 30rem;
-  }
-  .container-grid{
-      grid-template-columns: 0px auto;
-  }.container-box{
-    flex-direction: column;
-  }.main-cnc-img{
-    display: none;
-  }.main-plan-img{
-    display: flex;
-    opacity: 0.1;
-  }.main-info-contents-box{
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }.main-info-contents-box>div{
-    max-width: 100%;
-  }
-}
-
-
-.test-box{
-  transition: all 1s;
-}
-.test-box:hover{
-  scale: 1.5;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }

@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        'width': 'width',
+      },
       screens: {
         '1060': {'max': '1060px'},
         '1260': {'max': '1260px'},
